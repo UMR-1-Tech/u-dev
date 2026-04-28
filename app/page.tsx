@@ -1,65 +1,72 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <main className="min-h-screen bg-gray-950 text-white p-10">
+      
+      {/* Navbar */}
+      <nav className="flex justify-between items-center mb-12">
+        <h1 className="text-2xl font-bold text-blue-500">U-Dev</h1>
+        <div className="space-x-6">
+          <a href="#">Home</a>
+          <a href="#">Services</a>
+          <a href="#">Portfolio</a>
+          <a href="/get-quote" className="bg-blue-600 px-4 py-2 rounded">
+            Get Quote
+          </a>
+        </div>
+      </nav>
+
+      {/* Hero Section */}
+      <section className="text-center mt-20">
+        <h2 className="text-5xl font-bold leading-tight">
+          Build Smart Solutions <br /> For Your Business
+        </h2>
+
+        <p className="mt-6 text-lg text-gray-400">
+          Custom development using cost-efficient technologies. 
+          No monthly fees. Pay once, scale forever.
+        </p>
+
+        <div className="mt-8 space-x-4">
+          <a
+            href="/get-quote"
+            className="bg-blue-600 px-6 py-3 rounded text-white"
+          >
+            Get Quote Today
+          </a>
+
+          <a
+            href="#"
+            className="border border-gray-600 px-6 py-3 rounded"
+          >
+            View Projects
+          </a>
+        </div>
+      </section>
+
+      {/* Features */}
+      <section className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-20">
+        <div className="p-6 bg-gray-900 rounded">
+          <h3 className="text-xl font-semibold">Cost Efficient</h3>
+          <p className="text-gray-400 mt-2">
+            We use free-tier technologies to reduce your cost.
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+        <div className="p-6 bg-gray-900 rounded">
+          <h3 className="text-xl font-semibold">Fast Delivery</h3>
+          <p className="text-gray-400 mt-2">
+            Projects completed in 1–3 weeks.
+          </p>
         </div>
-      </main>
-    </div>
+
+        <div className="p-6 bg-gray-900 rounded">
+          <h3 className="text-xl font-semibold">Full Stack</h3>
+          <p className="text-gray-400 mt-2">
+            Websites, dashboards, and automation systems.
+          </p>
+        </div>
+      </section>
+
+    </main>
   );
 }
